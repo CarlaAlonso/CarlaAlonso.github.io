@@ -23,10 +23,14 @@ body {
   padding-right: 5%;
 }
 
+.color-navbar{
+  color: #ffcd01 !important;
+}
+
 .title-position{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center !important;
+  align-items: center !important;
+  vertical-align: middle !important;
 }
 
 .peridot-title{
@@ -61,4 +65,14 @@ body {
 
 .title-amethyst-position{
   text-align: center;
+}
+
+.card-margin{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.card-text-padding{
+  padding-left: 5% !important;
+  padding-right: 5% !important:
 }
