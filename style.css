@@ -76,3 +76,10 @@ body {
   padding-left: 5% !important;
   padding-right: 5% !important:
 }
+
+.tamanio_texto_logo1{
+  font-size: 80%; !important
+  padding-left: 5%; !important
+  padding-right: 5%; !important
+  
+}
