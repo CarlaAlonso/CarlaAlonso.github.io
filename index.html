@@ -224,6 +224,103 @@
     </button>
   </div>
 
+
+
+
+
+  <script>
+    /*$.getJSON('https://api.github.com/repos/luiscal4a/luiscal4a.github.io', function(data) {
+      var text = `Estrellas en repositorio de GitHub: ${data.stargazers_count}`
+      text = text.concat(" <i class=\"fas fa-star\"></i>");
+      $(".starRating").html(text);
+    });*/
+    document.addEventListener("DOMContentLoaded", function(){
+      getStars();
+    });
+
+    function getStars(){
+      loadJSON('https://api.github.com/repos/luiscal4a/luiscal4a.github.io',
+        function(data) { console.log(data); },
+        function(xhr) { console.error(xhr); }
+        );
+    }
+
+    function loadJSON(path, success, error)
+    {
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function()
+      {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            if (success){
+              var myParsed =JSON.parse(xhr.responseText);
+              console.log(myParsed.stargazers_count);
+              document.getElementById("starRating").innerHTML= "Estrellas en repositorio de GitHub: "+ myParsed.stargazers_count + " <i class=\"fas fa-star\"></i>";
+              $("i.loader").remove();
+            }
+          } else {
+            if (error)
+              error(xhr);
+          }
+        }
+      };
+      xhr.open("GET", path, true);
+      xhr.send();
+    }
+  </script>
+
+
+  <script type="text/javascript" src="js/hilitor.js"></script>
+  <script type="text/javascript">
+    var myHilitor = new Hilitor2("search-para");
+    function highlight(){
+      var text = document.getElementById("searchInput").value;
+      if(text.length>0)myHilitor.apply(text);
+      document.getElementById("searchInput").value = "";
+    }
+    function removeHighlight(){
+      myHilitor.remove();
+    }
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#tooglenight").change(function() {
+        if(this.checked) {
+          $(".main-color").addClass("main-color-night");
+          $(".main-color-night").removeClass("main-color");
+          $(".main-text-color").addClass("main-text-color-night");
+          $(".main-text-color-night").removeClass("main-text-color");
+          $(".color-accent").addClass("color-accent-night");
+          $(".color-accent-night").removeClass("color-accent");
+          $(".background-light").addClass("background-light-night");
+          $(".background-light-night").removeClass("background-light");
+          $(".background-dark").addClass("background-dark-night");
+          $(".background-dark-night").removeClass("background-dark");
+       $(".change").css("color", "white");
+        }else{
+          $(".main-color-night").addClass("main-color");
+          $(".main-color").removeClass("main-color-night");
+          $(".main-text-color-night").addClass("main-text-color");
+          $(".main-text-color").removeClass("main-text-color-night");
+          $(".color-accent-night").addClass("color-accent");
+          $(".color-accent").removeClass("color-accent-night");
+          $(".background-light-night").addClass("background-light");
+          $(".background-light").removeClass("background-light-night");
+          $(".background-dark-night").addClass("background-dark");
+          $(".background-dark").removeClass("background-dark-night");
+          $(".change").css("color", "black");
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+
 </body>
 
 </html>
