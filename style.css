@@ -3,90 +3,70 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 
 body {
+  background: #649173;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #DBD5A4, #649173);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #DBD5A4, #649173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
-  background-image: "espacio2.jpg";
-  background-attachment: fixed;/*para que sea estático*/
-  /*background-position: top right;/*arriba a la derecha*/
-  /*background-repeat: no-repeat;/*que no se repita el fondo*/
-
+  margin: 0;
+  color: #444;
 }
 
-.background{
-  color: rgba(38, 2, 68, 0.699);
+.my-blue{
+  color: #3f888f;
 }
 
-.padding{
+.app{
   padding-top: 5%;
-  padding-bottom: 5%;
   padding-left: 5%;
   padding-right: 5%;
 }
 
-.card-panel{
-  padding-left: 5% ;
-  padding-right: 5% ;
+.color-navbar{
+  color: #ffcd01 !important;
 }
 
-.card-title{
-  color: rgb(252, 252, 252);
-  font-size: 25px;
-  font-weight: bold;
+.title-position{
+  justify-content: center !important;
+  align-items: center !important;
+  vertical-align: middle !important;
+}
+
+.card-panel{
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+
+.card_title1{
+  color: blueviolet !important;
+  font-size: 50px !important;
+  font-weight: bold !important;
 }
 
 .card-margin{
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 2.5%;
 }
 
-.card-text{
-  color: rgb(255, 255, 255);
+.card-text-padding{
+  padding-left: 5% !important;
+  padding-right: 5% !important:
 }
 
-.purple0{
-  background-color: rgb(48, 24, 71);
+.tamanio_texto_logo1{
+  font-size: 80%; !important
+  padding-left: 5%; !important
+  padding-right: 5%; !important
+
 }
 
-.purple1{
-  background-color: rgba(48, 24, 71, 0.575);
+.card_background{
+  color: #EEFF70; !important
 }
 
-.gris{
-  background-color: rgba(143, 141, 140, 0.322);
-}
-.grey2{
-  background-color: rgba(75, 71, 71, 0.836);
-}
-.link-text{
-  background-color: rgb(255, 106, 0);
-}
-
-.imagenIz{
-  float: left;
-}
-
-.textoADerecha{
-  padding-left: 5%;
-}
-
-.video {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 20px;
-	height: 0;
-	overflow: hidden;
-}
-/***
-* @author Brad Dalton - WP Sites
-* @link http://wpsites.net/wordpress-tips/embed-videos-responsive/
-***/
-.video iframe,  
-.video object,  
-.video embed {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
+.rot90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  rotation: 90deg;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
